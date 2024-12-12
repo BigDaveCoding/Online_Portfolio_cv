@@ -53,6 +53,7 @@ nav {
 }
 
 #nav_info span {
+    padding-top: 0.25rem; /* matches padding top on nav_links li */
     padding-bottom: 0.2rem;
 }
 
@@ -66,4 +67,59 @@ nav {
 section {
     height: 100vh;
     border: 2px green dotted;
+}
+
+#hero_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero_photos {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 70%;
+    justify-content: center;
+    
+}
+
+#hero_photo_1, #hero_photo_2, #hero_photo_3 {
+    position: absolute;
+    overflow: hidden;
+}
+
+#david_pablo_sand_dunes_img {
+    width: 30%;
+    height: auto;
+}
+
+#pablo_behind_head_img {
+    width: 13%;
+    height: auto;
+}
+
+#cara_david_sedona_img {
+    width: 25%;
+    height: auto;
+}
+
+#hero_photo_1 {
+    top: 0%;
+    left: 20%;
+}
+
+#hero_photo_2 {
+    top: 10%;
+    left: 40%;
+}
+
+#hero_photo_3 {
+    top: 35%;
+    left: 68%;
+    /* right: 100%; */
+}
+
+.hero_img {
+    filter:grayscale(100%);
 }
