@@ -45,5 +45,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
         duration: 3,
         ease: 'power2.inOut'
     });
+
+    function updateUKTimeandDate() {
+        const ukTimeElement = document.querySelector('#uk_time');
+        const ukDateElement = document.querySelector('#uk_date');
+
+        const now = new Date();
+        const options = { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: true };
+        const timeString = now.toLocaleTimeString('en-GB', options);
+        const dateString = now.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+
+        ukTimeElement.textContent = timeString.toUpperCase();
+        ukDateElement.textContent = dateString.toUpperCase();
+    }
+    updateUKTimeandDate();
+    setInterval(updateUKTimeandDate, 60000);
 });
 
