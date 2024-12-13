@@ -210,11 +210,16 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid darkgreen; */
-    background-color: rgba(167, 194, 167, 0.337);
-    border-radius: 1rem;
-    margin: 0 0.5rem;
+    border: 0.5px solid black;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 0.1rem;
+    margin: 0 0.75rem;
+    cursor: pointer;
 }
+
+/* .project_container:hover {
+    transform: scale(1.1);
+} */
 
 .project_container span {
     letter-spacing: 0.025rem;
