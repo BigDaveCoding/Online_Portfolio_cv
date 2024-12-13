@@ -37,6 +37,7 @@ nav {
 }
 
 .nav_link_link {
+    display: inline-block;
     cursor: pointer;
 }
 
