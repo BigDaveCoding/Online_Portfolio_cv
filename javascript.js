@@ -33,6 +33,28 @@ document.addEventListener("DOMContentLoaded", (event) => {
         })
     });
 
+    project_containers = document.querySelectorAll('.project_container');
+    project_containers.forEach((container) => {
+        container.addEventListener('mouseover', () => {
+            console.log('hovering over project container');
+            gsap.to(container, {
+                scale: 1.1,
+                duration: 0.5,
+                ease: 'power2.inOut'
+            });
+        });
+
+        container.addEventListener('mouseleave', () => {
+            console.log('leaving project container');
+            gsap.to(container, {
+                scale: 1,
+                duration: 0.5,
+                ease: 'power2.inOut'
+            });
+        });
+
+    });
+
     // selecting elements to animate
     let myName = document.querySelector('#name');
     let myTitle = document.querySelector('#title');
@@ -139,7 +161,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         fadeInHeroPhotos();
     }
 
-
     // updates the uk time and date every minute
     function updateUKTimeandDate() {
         const ukTimeElement = document.querySelector('#uk_time');
@@ -185,11 +206,32 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     yoyo: true
                 }, index * 0.6);
             });
-            
         });
-
     }
     infoNavBar();
+
+    function projectsNavBar() {
+        const projectsNavBar = document.querySelector('#nav_projects_link');
+        const projects = document.querySelectorAll('.project_container');
+        console.log(projects);
+
+        projectsNavBar.addEventListener('click', () => {
+            console.log('clicked projects nav link');
+            const timeline = gsap.timeline({
+                onComplete: () => timeline.reverse(),
+            });
+            projects.forEach((project, index) => {
+                timeline.to(project, {
+                    y: -30,
+                    duration: 0.6,
+                    ease: 'power2.inOut',
+                    repeat: 1,
+                    yoyo: true
+                }, index * 0.2);
+            });
+        });
+    }
+    projectsNavBar();
 
     // function infoNavLink() {
     //     const infoNavLink = document.querySelector('#nav_info_link');
