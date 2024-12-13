@@ -38,6 +38,43 @@ document.addEventListener("DOMContentLoaded", (event) => {
     ukDate = document.querySelector('#uk_date');
     console.log(myName);
 
+    function fadeInHeroPhotos() {
+        hero_pic_1 = document.querySelector('#david_pablo_sand_dunes_img');
+        hero_pic_2 = document.querySelector('#hero_photo_1');
+        hero_pic_3 = document.querySelector('#hero_photo_3');
+
+        gsap.fromTo(hero_pic_1, {
+            opacity: 0,
+            y: 500
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 2.5,
+            ease: 'power2.inOut'
+        });
+
+        gsap.fromTo(hero_pic_2, {
+            opacity: 0,
+            x: -600
+        }, {
+            opacity: 1,
+            x: 0,
+            duration: 3.3,
+            ease: 'power2.inOut'
+        });
+
+        gsap.fromTo(hero_pic_3, {
+            opacity: 0,
+            y: -1000
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 3,
+            ease: 'power2.inOut'
+        });
+
+    }
+
     gsap.to(myName, {
         text: 'DAVID SMITH',
         duration: 2,
@@ -56,28 +93,43 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
     });
 
-    hero_section = document.querySelector('#hero_section');
-    time_date = document.querySelector('#nav_info_date_time');
+
+    fade_in_navLinks = document.querySelector('#nav_links');
+    hero_photos = document.querySelector('#hero_photos')
+    hero_about_me = document.querySelector('#hero_about_text');
+    hero_latest_projects = document.querySelector('#hero_latest_projects');
 
     if (!name_title_anim_complete) {
-        // hero_section = document.querySelector('#hero_section');
-        hero_section.style.opacity = 0;
-        time_date.style.opacity = 0;
+        fade_in_navLinks.style.opacity = 0;
+        hero_photos.style.opacity = 0;
+        hero_about_me.style.opacity = 0;
+        hero_latest_projects.style.opacity = 0;
     }
 
     function updateHeroSection() {
-        
-        gsap.to(hero_section, {
+        gsap.to(hero_photos, {
             opacity: 1,
-            duration: 1,
-            ease: 'power2.inOut'
+            duration: 2,
+            ease: 'power2.inOut',
+            onComplete: () => {
+                gsap.to(hero_about_me, {
+                    opacity: 1,
+                    duration: 1.5,
+                    ease: 'power2.inOut'
+                });
+                gsap.to(hero_latest_projects, {
+                    opacity: 1,
+                    duration: 1.5,
+                    ease: 'power2.inOut',
+                });
+                gsap.to(fade_in_navLinks, {
+                    opacity: 0.8,
+                    duration: 1,
+                    ease: 'power2.inOut'
+                });
+            }
         });
-        gsap.to(time_date, {
-            opacity: 1,
-            duration: 1,
-            ease: 'power2.inOut'
-        });
-
+        fadeInHeroPhotos();
     }
 
 
@@ -91,8 +143,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
         const timeString = now.toLocaleTimeString('en-GB', options);
         const dateString = now.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 
-        ukTimeElement.textContent = timeString.toUpperCase();
-        ukDateElement.textContent = dateString.toUpperCase();
+        gsap.to(ukTimeElement, {
+            text: timeString.toUpperCase(),
+            duration: 3,
+            ease: 'power2.inOut'
+        });
+        gsap.to(ukDateElement, {
+            text: dateString.toUpperCase(),
+            duration: 3,
+            ease: 'power2.inOut'
+        });
+
+        // ukTimeElement.textContent = timeString.toUpperCase();
+        // ukDateElement.textContent = dateString.toUpperCase();
     }
     updateUKTimeandDate();
     setInterval(updateUKTimeandDate, 60000);
