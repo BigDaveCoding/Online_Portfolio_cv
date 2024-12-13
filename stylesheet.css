@@ -180,6 +180,24 @@ section {
     font-family: "Noto Sans", sans-serif;
 }
 
+#arrow_animation_container {
+    position: fixed;
+    justify-content: space-around;
+    left: 2.5%;
+    top: 10vh;
+    display: flex;
+    flex-direction: column;
+    width: 5vw;
+    height: 65vh;
+    border: 5px blue solid;
+}
+
+.arrow_animation {
+    transform: rotate(90deg);
+    height: 10%;
+    width: auto;
+}
+
 .project_container {
     font-size: 0.6rem;
     height: 150px;
