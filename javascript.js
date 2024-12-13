@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     console.log(gsap);
 
+    name_title_anim_complete = false;
+
     navLinks = document.querySelectorAll('.nav_link_link');
     // animation for navigation links
     navLinks.forEach((link) => {
@@ -32,6 +34,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     //animation for name and title
     myName = document.querySelector('#name');
     myTitle = document.querySelector('#title');
+    ukTime = document.querySelector('#uk_time');
+    ukDate = document.querySelector('#uk_date');
     console.log(myName);
 
     gsap.to(myName, {
@@ -39,13 +43,45 @@ document.addEventListener("DOMContentLoaded", (event) => {
         duration: 2,
         ease: 'power2.inOut'
     });
-
+    //returns name_title_anim_complete = true when animation is complete
     gsap.to(myTitle, {
         text: 'SOFTWARE DEVELOPER',
-        duration: 3,
-        ease: 'power2.inOut'
+        duration: 2.5,
+        ease: 'power2.inOut',
+        onComplete: () => {
+            name_title_anim_complete = true;
+            console.log('name and title animation complete');
+            console.log(name_title_anim_complete);
+            updateHeroSection();
+        }
     });
 
+    hero_section = document.querySelector('#hero_section');
+    time_date = document.querySelector('#nav_info_date_time');
+
+    if (!name_title_anim_complete) {
+        // hero_section = document.querySelector('#hero_section');
+        hero_section.style.opacity = 0;
+        time_date.style.opacity = 0;
+    }
+
+    function updateHeroSection() {
+        
+        gsap.to(hero_section, {
+            opacity: 1,
+            duration: 1,
+            ease: 'power2.inOut'
+        });
+        gsap.to(time_date, {
+            opacity: 1,
+            duration: 1,
+            ease: 'power2.inOut'
+        });
+
+    }
+
+
+    // updates the uk time and date every minute
     function updateUKTimeandDate() {
         const ukTimeElement = document.querySelector('#uk_time');
         const ukDateElement = document.querySelector('#uk_date');
