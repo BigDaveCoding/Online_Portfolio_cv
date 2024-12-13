@@ -167,26 +167,61 @@ document.addEventListener("DOMContentLoaded", (event) => {
     updateUKTimeandDate();
     setInterval(updateUKTimeandDate, 10000);
 
+    // function infoNavLink() {
+    //     const infoNavLink = document.querySelector('#nav_info_link');
+    //     const infoSection = document.querySelector('#hero_about_text');
 
-    function navLinkHover() {
-        const linkToIdMap = {
-            'INFO': '#hero_about_text',
-            'SKILLS & PROJECTS': '#hero_latest_projects',
-            'CONTACT': '#contact_section'
-        }
+    //     infoNavLink.addEventListener('mouseover', () => {
+    //         gsap.to(infoSection, {
+    //             keyframes: [
+    //                 { backgroundColor: 'rgba(0, 0, 0, 0.2)', duration: 0.5 },
+    //                 { backgroundColor: 'rgba(0, 255, 0, 0.2)', duration: 0.5 },
+    //                 { backgroundColor: 'rgba(0, 0, 255, 0.2)', duration: 0.5 }
+    //             ],
+    //             repeat: -1
+    //         });
+    //     });
+    //     infoNavLink.addEventListener('mouseleave', () => {
+    //         gsap.to(infoSection, {
+    //             backgroundColor: 'rgba(0, 0, 0, 0)',
+    //             duration: 0.5,
+    //             repeat: 0
+    //         });
+    //     });
+    // }
+    // infoNavLink();
 
-        navLinks.forEach((link) => {
-            link.addEventListener('click', () => {
-                const targetId = linkToIdMap[link.textContent];
-                const target = document.querySelector(targetId);
-                console.log('big booty bitches');
-                gsap.to(target, {
-                    
-                });
-            })
-        });
-    }
-    navLinkHover();
+
+    // function navLinkHover() {
+    //     const linkToIdMap = {
+    //         'INFO': '#hero_about_text',
+    //         'SKILLS & PROJECTS': '#hero_latest_projects',
+    //         'CONTACT': '#contact_section'
+    //     }
+
+    //     navLinks.forEach((link) => {
+
+    //         const targetId = linkToIdMap[link.textContent];
+    //         const target = document.querySelector(targetId);
+    //         link.addEventListener('mouseover', () => {
+    //             console.log('big booty bitches');
+    //             console.log(target);
+    //             gsap.to(target, {
+    //                 backgroundColor: 'rgba(0, 0, 0, 0.2)',
+    //                 duration: 0.5,
+    //                 borderradius: 10
+    //             });
+    //         });
+
+    //         link.addEventListener('mouseleave', () => {
+    //             gsap.to(target, {
+    //                 backgroundColor: 'rgba(0, 0, 0, 0)',
+    //                 duration: 0.5
+    //             });
+    //         });
+    //     });
+    // }
+    // navLinkHover();
 
 });
 
