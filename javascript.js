@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // returns to original position when mouse leaves
     navLinks.forEach((link) => {
         link.addEventListener('mouseover', () => {
-            console.log('hovering over link');
+            // console.log('hovering over link');
             gsap.to(link, {
                 y: -2.5,
                 duration: 0.2,
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
 
         link.addEventListener('mouseleave', () => {
-            console.log('leaving link');
+            // console.log('leaving link');
             gsap.to(link, {
                 y: 0,
                 duration: 0.2,
@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
     // selecting elements to animate
-    myName = document.querySelector('#name');
-    myTitle = document.querySelector('#title');
+    let myName = document.querySelector('#name');
+    let myTitle = document.querySelector('#title');
     ukTime = document.querySelector('#uk_time');
     ukDate = document.querySelector('#uk_date');
     console.log(myName);
@@ -100,10 +100,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // selecting elements to set 0 opacity on page load
     // animation will commence when name_title_anim_complete = true
-    fade_in_navLinks = document.querySelector('#nav_links');
-    hero_photos = document.querySelector('#hero_photos')
-    hero_about_me = document.querySelector('#hero_about_text');
-    hero_latest_projects = document.querySelector('#hero_latest_projects');
+    let fade_in_navLinks = document.querySelector('#nav_links');
+    let hero_photos = document.querySelector('#hero_photos')
+    let hero_about_me = document.querySelector('#hero_about_text');
+    let hero_latest_projects = document.querySelector('#hero_latest_projects');
 
     // bool returns false on page load so styles of these elements are set to opacity 0
     if (!name_title_anim_complete) {
@@ -166,5 +166,27 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
     updateUKTimeandDate();
     setInterval(updateUKTimeandDate, 10000);
+
+
+    function navLinkHover() {
+        const linkToIdMap = {
+            'INFO': '#hero_about_text',
+            'SKILLS & PROJECTS': '#hero_latest_projects',
+            'CONTACT': '#contact_section'
+        }
+
+        navLinks.forEach((link) => {
+            link.addEventListener('click', () => {
+                const targetId = linkToIdMap[link.textContent];
+                const target = document.querySelector(targetId);
+                console.log('big booty bitches');
+                gsap.to(target, {
+                    
+                });
+            })
+        });
+    }
+    navLinkHover();
+
 });
 

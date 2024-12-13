@@ -169,7 +169,7 @@ section {
 #hero_about_text span {
     font-size: 1.05rem;
     letter-spacing: 0.1rem;
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 #hero_latest_projects {
