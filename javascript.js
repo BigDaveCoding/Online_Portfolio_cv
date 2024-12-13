@@ -33,13 +33,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
         })
     });
 
-    //animation for name and title
+    // selecting elements to animate
     myName = document.querySelector('#name');
     myTitle = document.querySelector('#title');
     ukTime = document.querySelector('#uk_time');
     ukDate = document.querySelector('#uk_date');
     console.log(myName);
 
+    // function to fade in hero photos
+    // Will be called in UpdateHeroSection function
     function fadeInHeroPhotos() {
         hero_pic_1 = document.querySelector('#david_pablo_sand_dunes_img');
         hero_pic_2 = document.querySelector('#hero_photo_1');
@@ -77,6 +79,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     }
 
+    //animations for name and title
     gsap.to(myName, {
         text: 'DAVID SMITH',
         duration: 1.3,
@@ -95,12 +98,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
     });
 
-
+    // selecting elements to set 0 opacity on page load
+    // animation will commence when name_title_anim_complete = true
     fade_in_navLinks = document.querySelector('#nav_links');
     hero_photos = document.querySelector('#hero_photos')
     hero_about_me = document.querySelector('#hero_about_text');
     hero_latest_projects = document.querySelector('#hero_latest_projects');
 
+    // bool returns false on page load so styles of these elements are set to opacity 0
     if (!name_title_anim_complete) {
         fade_in_navLinks.style.opacity = 0;
         hero_photos.style.opacity = 0;
@@ -160,6 +165,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         // ukDateElement.textContent = dateString.toUpperCase();
     }
     updateUKTimeandDate();
-    setInterval(updateUKTimeandDate, 60000);
+    setInterval(updateUKTimeandDate, 10000);
 });
 
