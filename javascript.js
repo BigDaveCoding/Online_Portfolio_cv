@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     navLinks = document.querySelectorAll('.nav_link_link');
     // animation for navigation links
+    // link slighlty raises y position when hovered over
+    // returns to original position when mouse leaves
     navLinks.forEach((link) => {
         link.addEventListener('mouseover', () => {
             console.log('hovering over link');
@@ -77,13 +79,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     gsap.to(myName, {
         text: 'DAVID SMITH',
-        duration: 2,
+        duration: 1.3,
         ease: 'power2.inOut'
     });
     //returns name_title_anim_complete = true when animation is complete
     gsap.to(myTitle, {
         text: 'SOFTWARE DEVELOPER',
-        duration: 2.5,
+        duration: 1.6,
         ease: 'power2.inOut',
         onComplete: () => {
             name_title_anim_complete = true;
@@ -145,12 +147,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         gsap.to(ukTimeElement, {
             text: timeString.toUpperCase(),
-            duration: 3,
+            duration: 2,
             ease: 'power2.inOut'
         });
         gsap.to(ukDateElement, {
             text: dateString.toUpperCase(),
-            duration: 3,
+            duration: 2,
             ease: 'power2.inOut'
         });
 
