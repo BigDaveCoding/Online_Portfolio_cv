@@ -189,13 +189,16 @@ section {
     flex-direction: column;
     width: 5vw;
     height: 65vh;
-    border: 5px blue solid;
+    /* border: 5px blue solid; */
 }
 
 .arrow_animation {
+    opacity: 0;
     transform: rotate(90deg);
     height: 10%;
     width: auto;
+    /* border: 1px red solid; */
+    overflow: hidden;
 }
 
 .project_container {

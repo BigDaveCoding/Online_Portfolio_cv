@@ -167,6 +167,30 @@ document.addEventListener("DOMContentLoaded", (event) => {
     updateUKTimeandDate();
     setInterval(updateUKTimeandDate, 10000);
 
+    function infoNavBar() {
+        const infoNavBar = document.querySelector('#nav_info_link');
+        const arrows = document.querySelectorAll('.arrow_animation');
+        console.log(arrows);
+
+        infoNavBar.addEventListener('click', () => {
+            console.log('clicked info nav link');
+            const timeline = gsap.timeline();
+            arrows.forEach((arrow, index) => {
+                timeline.to(arrow, {
+                    y: 5,
+                    opacity: 1,
+                    duration: 0.4,
+                    ease: 'power2.inOut',
+                    repeat: 1,
+                    yoyo: true
+                }, index * 0.6);
+            });
+            
+        });
+
+    }
+    infoNavBar();
+
     // function infoNavLink() {
     //     const infoNavLink = document.querySelector('#nav_info_link');
     //     const infoSection = document.querySelector('#hero_about_text');
