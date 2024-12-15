@@ -230,3 +230,30 @@ section {
     height: 100px;
     /* border-bottom: 1px solid black; */
 }
+
+
+.skills_projects_section {
+    position: fixed;
+    z-index: 100;
+    border: 0.3px black solid;
+    top: 10vh; /* matches nav height */
+    left: 15%;
+    width: 70%;
+    height: 65vh;
+    font-family: "Noto Sans", sans-serif;
+    background-color: rgba(220, 222, 219, 0.8);
+}
+
+.skills_projects_container {
+    display: flex;
+    justify-content: center;
+}
+
+.skills_projects_title {
+    display: flex;
+    border-bottom: 1px black solid;
+    width: 30%;
+    justify-content: center;
+    padding: 0.5rem;
+    letter-spacing: 0.1rem;
+}
