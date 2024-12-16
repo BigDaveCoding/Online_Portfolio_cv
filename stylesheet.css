@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
   .noto-sans {
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
@@ -8,6 +11,13 @@
     font-variation-settings:
       "wdth" 100;
   }
+
+  .bungee-shade-regular {
+    font-family: "Bungee Shade", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 
   * {
     padding: 0;
@@ -239,9 +249,13 @@ section {
     top: 10vh; /* matches nav height */
     left: 15%;
     width: 70%;
-    height: 65vh;
+    height: 60vh;
     font-family: "Noto Sans", sans-serif;
-    background-color: rgb(253, 253, 250);
+    background-color: rgb(219, 219, 213);
+    color: white;
+    background-color: rgb(48, 45, 45);
+    padding: 1rem;
+    /* display: none; */
 }
 
 .skills_projects_container {
@@ -250,14 +264,19 @@ section {
     width: 100%;
     height: 100%;
     align-items: center;
+    /* padding: 1rem; */
+    
 }
 
 .skills_projects_title {
     display: flex;
-    border-bottom: 0.5px black solid;
-    width: 30%;
-    justify-content: center;
-    padding: 0.5rem;
+    font-family: "Bungee Shade", sans-serif;
+    font-size: 1.5rem;
+    /* border-bottom: 0.5px black solid; */
+    width: 100%;
+
+    justify-content: left;
+    padding-left: 33.3%;
     letter-spacing: 0.1rem;
     margin-bottom: 1rem;
 }
@@ -290,6 +309,8 @@ section {
 .skill_logo {
     width: 80px;
     height: 80px;
+    filter: invert(100%);
+    
 }
 
 .skill_description {
@@ -306,7 +327,7 @@ section {
     height: 100%;
     justify-content: center;
     align-items: center;
-    border-left: 0.5px black solid;
+    border-left: 0.5px white solid;
     margin-left: 3rem;
 
 }
@@ -319,7 +340,7 @@ section {
 }
 
 .latest_project_video {
-    width: 50%;
+    width: 45%;
     height: 100%;
     /* filter: grayscale(100%); */
 }
