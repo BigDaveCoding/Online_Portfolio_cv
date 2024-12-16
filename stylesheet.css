@@ -254,7 +254,7 @@ section {
 
 .skills_projects_title {
     display: flex;
-    border-bottom: 1px black solid;
+    border-bottom: 0.5px black solid;
     width: 30%;
     justify-content: center;
     padding: 0.5rem;
@@ -265,16 +265,12 @@ section {
 .skills_projects_inner_container {
     display: flex;
     height: 100%;
-    flex-direction: column;
+    
 }
 
 .skills {
     width: 66.6%;
     height: 100%;
-
-}
-
-.latest_project {
 
 }
 
@@ -301,6 +297,31 @@ section {
     font-size: 0.9rem;
     letter-spacing: 0.05rem;
     line-height: 1.3rem;;
+}
+
+.latest_project {
+    display: flex;
+    flex-direction: column;
+    width: 33.3%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-left: 0.5px black solid;
+    margin-left: 3rem;
+
+}
+
+.latest_project_title {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.latest_project_video {
+    width: 50%;
+    height: 100%;
+    /* filter: grayscale(100%); */
 }
 
 /* .project_text {
