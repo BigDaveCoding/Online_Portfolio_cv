@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     function openProject(project_section) {
         about_me_text = document.querySelector('#hero_about_text');
-        // about_me_text.style.filter = 'blur(10px)';
+        kankei_video = document.querySelector('#kankei_website_video');
 
         gsap.to(project_section, {
             opacity: 1,
@@ -247,9 +247,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
             }
         });
 
+        if (project_section == '#web_dev_section') {
+            kankei_video.play();
+                
+            // kankei_video.play();
+        }
+
     }
     function closeProject(project_section) {
         about_me_text = document.querySelector('#hero_about_text');
+        kankei_video = document.querySelector('#kankei_website_video');
+
         gsap.to(project_section, {
             opacity: 0,
             duration: 1
@@ -260,12 +268,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 filter: 'blur(0px)'
             }
         });
+
+        if (project_section == '#web_dev_section') {
+            kankei_video.pause();
+        }
     }
 
     function hoverOverProject() {
         project_containers = document.querySelectorAll('.project_container');
 
-        project_container_map = {'web_dev_container':'#web_dev_section'};
+        project_container_map = {
+            'web_dev_container':'#web_dev_section',
+            'data_container':'#data_section'};
 
         project_containers.forEach((container) => {
             container.addEventListener('mouseover', () => {
