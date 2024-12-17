@@ -310,7 +310,6 @@ section {
     width: 80px;
     height: 80px;
     filter: invert(100%);
-    
 }
 
 .skill_description {
@@ -345,6 +344,9 @@ section {
     /* filter: grayscale(100%); */
 }
 
+#web_dev_section {
+    opacity: 0;
+}
 /* .project_text {
     display: flex;
     padding: 0 8rem;
