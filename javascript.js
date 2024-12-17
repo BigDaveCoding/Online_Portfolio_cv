@@ -33,27 +33,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
         })
     });
 
-    project_containers = document.querySelectorAll('.project_container');
-    project_containers.forEach((container) => {
-        container.addEventListener('mouseover', () => {
-            console.log('hovering over project container');
-            gsap.to(container, {
-                scale: 1.1,
-                duration: 0.5,
-                ease: 'power2.inOut'
-            });
-        });
+    // project_containers = document.querySelectorAll('.project_container');
+    // project_containers.forEach((container) => {
+    //     container.addEventListener('mouseover', () => {
+    //         console.log('hovering over project container');
+    //         gsap.to(container, {
+    //             scale: 1.1,
+    //             duration: 0.5,
+    //             ease: 'power2.inOut'
+    //         });
+    //     });
 
-        container.addEventListener('mouseleave', () => {
-            console.log('leaving project container');
-            gsap.to(container, {
-                scale: 1,
-                duration: 0.5,
-                ease: 'power2.inOut'
-            });
-        });
-
-    });
+    //     container.addEventListener('mouseleave', () => {
+    //         console.log('leaving project container');
+    //         gsap.to(container, {
+    //             scale: 1,
+    //             duration: 0.5,
+    //             ease: 'power2.inOut'
+    //         });
+    //     });
+    // });
 
     // selecting elements to animate
     let myName = document.querySelector('#name');
@@ -232,6 +231,71 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
     }
     projectsNavBar();
+
+    function openProject(project_section) {
+        about_me_text = document.querySelector('#hero_about_text');
+        // about_me_text.style.filter = 'blur(10px)';
+
+        gsap.to(project_section, {
+            opacity: 1,
+            duration: 1
+        });
+        gsap.to(about_me_text, {
+            duration: 1,
+            css: {
+                filter: 'blur(5px)'
+            }
+        });
+
+    }
+    function closeProject(project_section) {
+        about_me_text = document.querySelector('#hero_about_text');
+        gsap.to(project_section, {
+            opacity: 0,
+            duration: 1
+        });
+        gsap.to(about_me_text, {
+            duration: 1,
+            css: {
+                filter: 'blur(0px)'
+            }
+        });
+    }
+
+    function hoverOverProject() {
+        project_containers = document.querySelectorAll('.project_container');
+
+        project_container_map = {'web_dev_container':'#web_dev_section'};
+
+        project_containers.forEach((container) => {
+            container.addEventListener('mouseover', () => {
+                console.log('hovering over project container');
+                gsap.to(container, {
+                    scale: 1.1,
+                    duration: 0.5,
+                    ease: 'power2.inOut'
+                });
+                // if container id is in project_container_map
+                // open the corresponding project section
+                console.log(container.id);
+                console.log(project_container_map[container.id]);
+                if (container.id in project_container_map) {
+                    openProject(project_container_map[container.id]);
+                }
+            });
+
+            container.addEventListener('mouseleave', () => {
+                console.log('leaving project container');
+                gsap.to(container, {
+                    scale: 1,
+                    duration: 0.5,
+                    ease: 'power2.inOut'
+                });
+                closeProject(project_container_map[container.id]);
+            });
+        });
+    }
+    hoverOverProject();
 
     // function infoNavLink() {
     //     const infoNavLink = document.querySelector('#nav_info_link');
