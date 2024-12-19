@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     function openProject(project_section) {
         about_me_text = document.querySelector('#hero_about_text');
-        kankei_video = document.querySelector('#kankei_website_video');
+        kankei_video = document.querySelector('#kankei_desktop_video');
 
         gsap.to(project_section, {
             opacity: 1,
@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
     function closeProject(project_section) {
         about_me_text = document.querySelector('#hero_about_text');
-        kankei_video = document.querySelector('#kankei_website_video');
+        kankei_video = document.querySelector('#kankei_desktop_video');
 
         gsap.to(project_section, {
             opacity: 0,

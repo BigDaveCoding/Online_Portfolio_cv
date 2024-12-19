@@ -323,13 +323,14 @@ section {
     display: flex;
     flex-direction: column;
     width: 33.3%;
-    height: 100%;
+    height: 50vh;
     /* justify-content: center; */
     align-items: center;
     border-left: 0.5px white solid;
     margin-left: 3rem;
-    padding-left: 1rem;
-    border: 1px solid red;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    /* border: 1px solid red; */
 
 }
 
@@ -343,7 +344,23 @@ section {
 #kankei_website_video {
     width: 45%;
     height: 100%;
-    /* filter: grayscale(100%); */
+}
+
+#kankei_desktop_video_container {
+    width: 100%;
+    height: auto;
+}
+
+#kankei_desktop_video {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.kankei_project_text {
+    font-size: 0.75rem;
+    padding: 0.5rem 0;
+    line-height: 1.1rem;
 }
 
 #data_video {
@@ -356,16 +373,42 @@ section {
     /* height: 100%; */
 }
 
+.data_project_text{
+    font-size: 0.8rem;
+    padding: 0.5rem 0;
+    line-height: 1.1rem;
+}
+
 .data_video_container {
     width: 100%;
-    height: 5%;
+    height: 10%;
     overflow: hidden;
     /* border: 1px red solid; */
 }
 
 .data_video_container_two {
     width: 100%;
+    height: 35%;
+    overflow: hidden;
     
+}
+
+.project_link_logo {
+    width: 35px;
+    height: 35px;
+    filter: invert(100%);
+    margin-right: 0.25rem;
+}
+
+.project_link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.project_link_text {
+    font-size: 0.6rem;
 }
 
 #web_dev_section {
