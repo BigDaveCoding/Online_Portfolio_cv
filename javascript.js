@@ -279,7 +279,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         project_container_map = {
             'web_dev_container':'#web_dev_section',
-            'data_container':'#data_section'};
+            'data_container':'#data_section',
+            'education_container':'#education_section'};
 
         project_containers.forEach((container) => {
             container.addEventListener('mouseover', () => {

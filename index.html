@@ -77,13 +77,14 @@
                     <span>[ PERSONAL PROJECTS ]</span>
                     <img id="python_logo" class="project_logo" src="assets/python copy.png" alt="Python Logo">
                 </div>
-                <div class="project_container">
+                <div id="education_container" class="project_container">
                     <span>[ EDUCATION ]</span>
                     <img id="education_logo" class="project_logo" src="assets/book.png" alt="Education Logo">
                 </div>
             </div>
         </div>
     </section>
+
     <section id="web_dev_section" class = "skills_projects_section">
         <div id="web_dev_container" class="skills_projects_container">
             <div class="skills_projects_title">
@@ -184,10 +185,106 @@
             </div> 
         </div>
     </section>
+
     <section id="data_section" class = "skills_projects_section">
         <div id="data_container" class="skills_projects_container">
             <div class="skills_projects_title">
                 <h1 class="project_title">DATA ANALYTICS</h1>
+            </div>
+            <div class="skills_projects_inner_container">
+               <div class="skills">
+                    <div class="skill_container">
+                        <div class="skill_logo_name">
+                            <img class="skill_logo" src="assets/data_icons/python copy.png" alt="HTML Logo">
+                            <!-- <span class="skill_name">HTML</span> -->
+                        </div>
+                        <p class="skill_description">
+                            I have strong proficiency in <strong>Python</strong>, using it for data analysis, automation, and scripting tasks.
+                             I leverage libraries like Pandas, NumPy, and Matplotlib to analyze datasets, build solutions, 
+                             and extract insights efficiently for data-driven decisions.
+                        </p>
+                    </div>
+                    <div class="skill_container">
+                        <div class="skill_logo_name">
+                            <img class="skill_logo" src="assets/data_icons/sql-server.png">
+                            <!-- <span class="skill_name">HTML</span> -->
+                        </div>
+                        <p class="skill_description">
+                            I am skilled in <strong>SQL</strong>, with experience writing queries to extract, filter, and manipulate data from relational databases.
+                             I can perform joins, aggregations, and subqueries to organize data for analysis and reporting purposes.
+                        </p>
+                    </div>
+                    <div class="skill_container">
+                        <div class="skill_logo_name">
+                            <img class="skill_logo" src="assets/data_icons/panda-bear.png">
+                            <!-- <span class="skill_name">HTML</span> -->
+                        </div>
+                        <p class="skill_description">
+                            I use <strong>Pandas</strong> extensively for data manipulation and analysis.
+                             With its robust tools, I clean, reshape, and analyze datasets efficiently, 
+                             handling tasks like filtering, merging, and transforming data to uncover key insights.
+                        </p>
+                    </div>
+                    <div class="skill_container">
+                        <div class="skill_logo_name">
+                            <img class="skill_logo" src="assets/data_icons/aggregate.png" alt="GSAP Logo">
+                            <!-- <span class="skill_name">[ GSAP ]</span> -->
+                        </div>
+                        <p class="skill_description">
+                            I have experience creating clear and impactful <strong>data visualizations</strong> using tools like Matplotlib &
+                             Seaborn. By presenting insights visually, I help stakeholders better understand trends, patterns, and findings within data.
+                        </p>
+                    </div>
+                    <div class="skill_container">
+                        <div class="skill_logo_name">
+                            <img class="skill_logo" src="assets/data_icons/broom.png">
+                            <!-- <span class="skill_name">HTML</span> -->
+                        </div>
+                        <p class="skill_description">
+                            I understand the importance of <strong>clean</strong>, <strong>reliable data</strong> in analytics.
+                             I use Python, Pandas, and SQL to identify and resolve inconsistencies, handle missing values, 
+                             and preprocess data, ensuring it is ready for accurate analysis and reporting.
+                        </p>
+                    </div>
+               </div>
+               <div class="latest_project">
+                    <h2 class="latest_project_title">LATEST PROJECT</h2>
+                    <div class="data_project_text">
+                        <p>I developed a Python script to collect user inputs on various ileostomy-related questions, ensuring smooth data entry and storage.</p>
+                    </div>
+                    <div class="data_video_container">
+                        <video id="data_video" class="latest_project_video" autoplay muted loop>
+                            <source src="assets/video/ileostomy_video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="data_project_text">
+                        <p>The collected data was stored in a SQL database, allowing for efficient organization and retrieval.</p>
+                    </div>
+                    <div class="data_video_container_two">
+                        <video id="data_video_two" class="latest_project_video" autoplay muted loop>
+                            <source src="assets/video/data_video_two.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                    </div>
+                    <div class="data_project_text">
+                        <p>Using Pandas and Matplotlib, I analyzed the data to identify trends and insights, 
+                            which were then visualized in clear, informative charts and graphs.</p>
+                    </div>
+                    <!-- <div class="project_link">
+                        <a href="https://github.com/BigDaveCoding/Ileostomy" target="_blank">
+                            <img src="assets/github_logo.png" alt="GitHub Logo" class="project_link_logo">
+                        </a>
+                        <span class="project_link_text">[ Check Out My Code ]</span>
+                    </div> -->
+               </div>
+            </div> 
+        </div>
+    </section>
+
+    <section id="education_section" class = "skills_projects_section">
+        <div id="education_container" class="skills_projects_container">
+            <div class="skills_projects_title">
+                <h1 class="project_title">EDUCATION</h1>
             </div>
             <div class="skills_projects_inner_container">
                <div class="skills">
@@ -247,33 +344,6 @@
                </div>
                <div class="latest_project">
                     <h2 class="latest_project_title">LATEST PROJECT</h2>
-                    <div class="data_project_text">
-                        <p>I developed a Python script to collect user inputs on various ileostomy-related questions, ensuring smooth data entry and storage.</p>
-                    </div>
-                    <div class="data_video_container">
-                        <video id="data_video" class="latest_project_video" autoplay muted loop>
-                            <source src="assets/video/ileostomy_video.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="data_project_text">
-                        <p>The collected data was stored in a SQL database, allowing for efficient organization and retrieval.</p>
-                    </div>
-                    <div class="data_video_container_two">
-                        <video id="data_video_two" class="latest_project_video" autoplay muted loop>
-                            <source src="assets/video/data_video_two.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                    </div>
-                    <div class="data_project_text">
-                        <p>Using Pandas and Matplotlib, I analyzed the data to identify trends and insights, 
-                            which were then visualized in clear, informative charts and graphs.</p>
-                    </div>
-                    <!-- <div class="project_link">
-                        <a href="https://github.com/BigDaveCoding/Ileostomy" target="_blank">
-                            <img src="assets/github_logo.png" alt="GitHub Logo" class="project_link_logo">
-                        </a>
-                        <span class="project_link_text">[ Check Out My Code ]</span>
-                    </div> -->
                </div>
             </div> 
         </div>
