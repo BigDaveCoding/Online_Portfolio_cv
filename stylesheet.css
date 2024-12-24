@@ -304,6 +304,10 @@ section {
     width: 100%;
 }
 
+.edu {
+    height: 25%;
+}
+
 .skill_logo_name {
     display: flex;
     flex-direction: column;

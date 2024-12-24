@@ -103,13 +103,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     //animations for name and title
     gsap.to(myName, {
         text: 'DAVID SMITH',
-        duration: 1.3,
+        duration: 1,
         ease: 'power2.inOut'
     });
     //returns name_title_anim_complete = true when animation is complete
     gsap.to(myTitle, {
         text: 'SOFTWARE DEVELOPER',
-        duration: 1.6,
+        duration: 1,
         ease: 'power2.inOut',
         onComplete: () => {
             name_title_anim_complete = true;
