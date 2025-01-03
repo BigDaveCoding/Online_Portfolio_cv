@@ -11,7 +11,7 @@
     }
     #hero_photo_1 {
         top: 0%;
-        left: 10%;
+        left: 13%;
     }
     #hero_photo_2 {
         top: 10%;
@@ -98,7 +98,7 @@
         width: 4rem;
         height: auto;
     }
-    
+
     .project_container {
         width: 8rem;
         height: 8rem;
