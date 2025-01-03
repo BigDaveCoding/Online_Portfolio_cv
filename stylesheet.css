@@ -424,6 +424,39 @@ section {
 #web_dev_section {
     opacity: 0;
 }
+
+#contact_section {
+    font-family: "Noto Sans", sans-serif;
+    position: fixed;
+    z-index: 200;
+    top: 10vh;
+    left: -200px;
+    height: auto;
+    width: auto;
+    padding-left: 0.25rem;
+    /* background-color: rgb(48, 45, 45);
+    color: white; */
+    margin-left: 1.5rem;
+    opacity: 0.1;
+}
+
+#contact_container h2 {
+    font-size: 1rem;
+    font-family: "Bungee Shade", sans-serif;
+    letter-spacing: 0.05rem;
+}
+
+#contact_container span {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+#contact_email, #contact_number {
+    padding: 0.5rem 0;
+    line-height: 1.5rem;
+}
+
+
 /* .project_text {
     display: flex;
     padding: 0 8rem;

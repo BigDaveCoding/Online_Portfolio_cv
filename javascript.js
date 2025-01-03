@@ -312,6 +312,28 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
     hoverOverProject();
 
+    function contactFadeIn() {
+        contact_button = document.querySelector('#nav_contact_link');
+        contact_section = document.querySelector('#contact_section');
+        contact_button.addEventListener('mouseover', () => {
+            gsap.to(contact_section, {
+                x: 200,
+                opacity: 1,
+                duration: 1,
+                ease: 'power2.inOut'
+            });
+        });
+        contact_button.addEventListener('mouseleave', () => {
+            gsap.to(contact_section, {
+                x: 0,
+                opacity: 0,
+                duration: 1,
+                ease: 'power2.inOut'
+            });
+        });
+    }
+    contactFadeIn();
+
     // function infoNavLink() {
     //     const infoNavLink = document.querySelector('#nav_info_link');
     //     const infoSection = document.querySelector('#hero_about_text');
