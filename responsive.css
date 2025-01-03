@@ -1,0 +1,107 @@
+@media (max-width: 1024px) {
+    #pablo_behind_head_img {
+        width: 10rem;
+    }
+    #david_pablo_sand_dunes_img {
+        width: 20rem;
+    }
+    #cara_david_sedona_img {
+        width: 8rem;
+        height: auto;
+    }
+    #hero_photo_1 {
+        top: 0%;
+        left: 10%;
+    }
+    #hero_photo_2 {
+        top: 10%;
+        left: 35%;
+    }
+    #hero_photo_3 {
+        top: 35%;
+        left: 78%;
+    }
+    #web_dev_section, #data_section, #education_section {
+        width: 95%;
+        left: 2.5%;
+    }
+    #hero_about_text {
+        margin-right: 5%;
+    }
+    #contact_section {
+        top: 60%;
+    }
+    .arrow_animation {
+        height: 4rem;
+        width: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #pablo_behind_head_img {
+        width: 8rem;
+    }
+    #david_pablo_sand_dunes_img {
+        width: 18rem;
+    }
+    #cara_david_sedona_img {
+        width: 8rem;
+    }
+    #hero_photos {
+        height: 60%;
+        top: 12.5vh;
+    }
+    #hero_info_container {
+        height: 27.5%;
+    }
+    #hero_photo_1 {
+        top: 45%;
+        left: 15%;
+    }
+    #hero_photo_2 {
+        top: 15%;
+        left: 35%;
+    }
+    #hero_photo_3 {
+        top: 45%;
+        left: 76%;
+    }
+    #web_dev_section, #data_section, #education_section {
+        width: 100%;
+        left: 0;
+    }
+    #hero_about_text {
+        margin-right: 0%;
+    }
+    #hero_about_text span {
+        font-size: 0.8rem;
+    }
+
+    #contact_section {
+        top: 12.5vh;
+    }
+    #arrow_animation_container {
+        height: 55vh;
+    }
+    .arrow_animation {
+        height: 3rem;
+        width: 3rem;
+    }
+    .latest_project {
+        display: none;
+    }
+    .skills {
+        width: 100%;
+    }
+
+    .project_logo {
+        width: 4rem;
+        height: auto;
+    }
+    
+    .project_container {
+        width: 8rem;
+        height: 8rem;
+        margin: 0 0.25rem;
+    }
+}
